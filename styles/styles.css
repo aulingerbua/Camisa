@@ -1,0 +1,106 @@
+ @import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro);
+* {
+  color: #000080;
+  box-sizing: border-box;
+  font-family: 'Source Sans Pro', 'sans-serif';
+  font-size: 14pt;
+}
+html,
+body {
+  height: 100%;
+}
+.camisa-logo {
+  width: 50px;
+  margin: 20px auto 20px auto;
+}
+.camisa-logo img {
+  width: 50px;
+}
+p.alert {
+  min-width: 10em;
+  margin: auto;
+  color: #f00;
+}
+p.notice {
+  max-width: 20em;
+  margin: 20px auto 0 auto;
+  color: #00b71c;
+}
+#login-form {
+  width: 300px;
+  margin: 100px auto 0 auto;
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+#login-form input {
+  display: block;
+  width: 75%;
+  margin: 10px auto;
+  background-color: #eee;
+  border: 1pt solid #ccc;
+  border-radius: 4px;
+  padding: 3px;
+}
+#login-form input[type=submit] {
+  transition: all 0.4s ease;
+}
+#login-form input[type=submit]:hover {
+  background-color: #cacae0;
+}
+#login-form label {
+  display: block;
+  width: 75%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.install {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 100px;
+}
+.install form {
+  width: 300px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.install_message {
+  margin: 20px auto 20px auto;
+  font-family: arial sans-serif;
+  padding: 5px;
+  border: 1px solid #012022;
+  width: 500px;
+}
+.install_message label {
+  display: block;
+}
+.install_message.success {
+  background-color: #6bf66c;
+}
+.install_message.fail {
+  background-color: #f66b6b;
+}
+.install_message.omit {
+  background-color: #02acbb;
+}
+.install_message#installbutton {
+  margin: 20px auto 20px auto;
+  font-family: arial sans-serif;
+  width: 100px;
+  text-align: center;
+  display: block;
+  padding: 8px;
+  font-size: 15pt;
+  color: #00f;
+  background: #ff0;
+  text-decoration: none;
+  border: 1px outset #00a1ff;
+}
+.install_message#installbutton:hover,
+.install_message#installbutton:active {
+  border: 1px inset #00a1ff;
+}
+.camisaBanner {
+  width: 500px;
+  margin: 100px auto 20px auto;
+}

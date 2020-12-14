@@ -1,0 +1,435 @@
+{
+	"tables": [
+		{
+			"system": [
+				{
+					"name": "id",
+					"type": "INT",
+					"default": false,
+					"null": false,
+					"autoinc": true
+				},
+				{
+					"name": "date",
+					"type": "DATETIME",
+					"default": false,
+					"null": false,
+					"autoinc": false
+				},
+				{
+					"name": "version",
+					"type": "VARCHAR (20)",
+					"default": false,
+					"null": false,
+					"autoinc": false
+				},
+				{
+					"name": "entry",
+					"type": "VARCHAR (50)",
+					"default": false,
+					"null": false,
+					"autoinc": false
+				},
+				{
+					"name": "value",
+					"type": "VARCHAR (500)",
+					"default": false,
+					"null": false,
+					"autoinc": false
+				},
+				{
+					"name": "grp",
+					"type": "VARCHAR (50)",
+					"default": "NULL",
+					"null": true,
+					"autoinc": false
+				},
+				{
+					"name": "info",
+					"type": "VARCHAR (500)",
+					"default": "NULL",
+					"null": true,
+					"autoinc": false
+				}
+			],
+			"primary_key": "id",
+			"unique_key": [
+				"entry",
+				"version",
+				"grp"
+			]
+		},
+		{
+			"textpages": [
+				{
+					"name": "id",
+					"type": "INT",
+					"default": false,
+					"null": false,
+					"autoinc": true
+				},
+				{
+					"name": "cdate",
+					"type": "DATETIME",
+					"default": "NULL",
+					"null": true,
+					"autoinc": false
+				},
+				{
+					"name": "adate",
+					"type": "DATETIME",
+					"default": "NULL",
+					"null": true,
+					"autoinc": false
+				},
+				{
+					"name": "creator",
+					"type": "VARCHAR (50)",
+					"default": "NULL",
+					"null": true,
+					"autoinc": false
+				},
+				{
+					"name": "changer",
+					"type": "VARCHAR (50)",
+					"default": "NULL",
+					"null": true,
+					"autoinc": false
+				},
+				{
+					"name": "page",
+					"type": "VARCHAR (50)",
+					"default": "NULL",
+					"null": true,
+					"autoinc": false
+				},
+				{
+					"name": "category",
+					"type": "VARCHAR (50)",
+					"default": "NULL",
+					"null": true,
+					"autoinc": false
+				},
+				{
+					"name": "chapter",
+					"type": "INT",
+					"default": 0,
+					"null": true,
+					"autoinc": false
+				},
+				{
+					"name": "title",
+					"type": "VARCHAR (250)",
+					"default": "NULL",
+					"null": true,
+					"autoinc": false
+				},
+				{
+					"name": "text",
+					"type": "TEXT",
+					"default": "NULL",
+					"null": true,
+					"autoinc": false
+				},
+				{
+					"name": "keywords",
+					"type": "VARCHAR (500)",
+					"default": "NULL",
+					"null": true,
+					"autoinc": false
+				},
+				{
+					"name": "status",
+					"type": "VARCHAR (10)",
+					"default": "'public'",
+					"null": true,
+					"autoinc": false
+				},
+				{
+					"name": "options",
+					"type": "VARCHAR (200)",
+					"default": "NULL",
+					"null": true,
+					"autoinc": false
+				}
+			],
+			"primary_key": "id",
+			"unique_key": [
+				"page",
+				"category",
+				"title"
+			]
+		},
+		{
+			"pages": [
+				{
+					"name": "id",
+					"type": "INT",
+					"default": false,
+					"null": false,
+					"autoinc": true
+				},
+				{
+					"name": "rank",
+					"type": "INT",
+					"default": 0,
+					"null": true,
+					"autoinc": false
+				},
+				{
+					"name": "name",
+					"type": "VARCHAR (150)",
+					"default": "NULL",
+					"null": true,
+					"autoinc": false
+				},
+				{
+					"name": "parent",
+					"type": "VARCHAR (150)",
+					"default": false,
+					"null": true,
+					"autoinc": false
+				},
+				{
+					"name": "template",
+					"type": "VARCHAR (100)",
+					"default": false,
+					"null": true,
+					"autoinc": false
+				},
+				{
+					"name": "status",
+					"type": "VARCHAR (50)",
+					"default": false,
+					"null": true,
+					"autoinc": false
+				},
+				{
+					"name": "permit",
+					"type": "SMALLINT",
+					"default": 10,
+					"null": true,
+					"autoinc": false
+				}
+			],
+			"primary_key": "id",
+			"unique_key": "name",
+			"prefill": [
+				{
+					"field": "name",
+					"value": "'Home'"
+				},
+				{
+					"field": "template",
+					"value": "'home'"
+				}
+			]
+		},
+		{
+			"templates": [
+				{
+					"name": "id",
+					"type": "INT",
+					"default": false,
+					"null": false,
+					"autoinc": true
+				},
+				{
+					"name": "module",
+					"type": "VARCHAR (50)",
+					"default": "NULL",
+					"null": true,
+					"autoinc": false
+				},
+				{
+					"name": "template",
+					"type": "VARCHAR (100)",
+					"default": "NULL",
+					"null": true,
+					"autoinc": false
+				},
+				{
+					"name": "permit",
+					"type": "SMALLINT",
+					"default": 2,
+					"null": true,
+					"autoinc": false
+				}
+			],
+			"primary_key": "id",
+			"unique_key": "template",
+			"prefill": [
+				{
+					"field": "template",
+					"value": [
+						"'default'",
+						"'home'"
+					]
+				},
+				{
+					"field": "module",
+					"value": [
+						"'single'",
+						"'single'"
+					]
+				}
+			]
+		},
+		{
+			"members": [
+				{
+					"name": "since",
+					"type": "DATETIME",
+					"default": false,
+					"null": true,
+					"autoinc": false
+				},
+				{
+					"name": "uid",
+					"type": "VARCHAR (50)",
+					"default": false,
+					"null": false,
+					"autoinc": false
+				},
+				{
+					"name": "name",
+					"type": "VARCHAR (150)",
+					"default": false,
+					"null": true,
+					"autoinc": false
+				},
+				{
+					"name": "street",
+					"type": "VARCHAR (100)",
+					"default": false,
+					"null": true,
+					"autoinc": false
+				},
+				{
+					"name": "areacode",
+					"type": "INT (10)",
+					"default": false,
+					"null": true,
+					"autoinc": false
+				},
+				{
+					"name": "city",
+					"type": "VARCHAR (150)",
+					"default": false,
+					"null": true,
+					"autoinc": false
+				},
+				{
+					"name": "tel",
+					"type": "VARCHAR (50)",
+					"default": false,
+					"null": true,
+					"autoinc": false
+				},
+				{
+					"name": "mobile",
+					"type": "VARCHAR (50)",
+					"default": false,
+					"null": true,
+					"autoinc": false
+				},
+				{
+					"name": "email",
+					"type": "VARCHAR (100)",
+					"default": false,
+					"null": true,
+					"autoinc": false
+				},
+				{
+					"name": "homepage",
+					"type": "VARCHAR (100)",
+					"default": false,
+					"null": true,
+					"autoinc": false
+				},
+				{
+					"name": "description",
+					"type": "TEXT",
+					"default": false,
+					"null": true,
+					"autoinc": false
+				},
+				{
+					"name": "picture",
+					"type": "VARCHAR (100)",
+					"default": false,
+					"null": true,
+					"autoinc": false
+				},
+				{
+					"name": "pwd",
+					"type": "VARCHAR (255)",
+					"default": false,
+					"null": false,
+					"autoinc": false
+				},
+				{
+					"name": "role",
+					"type": "VARCHAR (50)",
+					"default": false,
+					"null": false,
+					"autoinc": false
+				},
+				{
+					"name": "options",
+					"type": "VARCHAR (150)",
+					"default": false,
+					"null": true,
+					"autoinc": false
+				}
+			],
+			"primary_key": "uid"
+		},
+		{
+			"roles": [
+				{
+					"name": "rolid",
+					"type": "INT",
+					"default": false,
+					"null": false,
+					"autoinc": true
+				},
+				{
+					"name": "role",
+					"type": "VARCHAR (20)",
+					"default": false,
+					"null": false,
+					"autoinc": false
+				},
+				{
+					"name": "level",
+					"type": "SMALLINT",
+					"default": false,
+					"null": false,
+					"autoinc": false
+				}
+			],
+			"primary_key": "rolid",
+			"prefill": [
+				{
+					"field": "role",
+					"value": [
+						"'guest'",
+						"'member'",
+						"'editor'",
+						"'administrator'"
+					]
+				},
+				{
+					"field": "level",
+					"value": [
+						"3",
+						"2",
+						"1",
+						"-1"
+					]
+				}
+			]
+		}
+	]
+}

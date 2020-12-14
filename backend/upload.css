@@ -1,0 +1,101 @@
+
+.files-frame {
+	width: 800px;
+	min-height: 500px;
+	border-radius: 5px;
+	box-shadow: 6px 6px 5px #888;
+	background: #efece6
+}
+
+.files-frame table {
+	width: 900px;
+	margin-left: auto;
+	margin-right: auto;
+	border-spacing: 15px
+}
+
+.files-frame h1, .files-frame h2, .files-frame h3 {
+	margin: 5px
+}
+
+.files-frame form {
+	margin: 0;
+	border: 0
+}
+
+.files-frame form ul {
+	padding: 0;
+	list-style-type: none
+}
+
+.files-frame td {
+	padding-left: 10px;
+	width: 50
+}
+
+.files-frame td img {
+	margin: 0 7px
+}
+
+.files-frame td:first-child {
+	background: #585466;
+	padding: 4px;
+	font-size: 16pt;
+	color: #ece65d;
+	border-radius: 5px
+}
+
+.files-frame td:first-child a {
+	color: #efece6
+}
+
+.files-frame td:first-child a:hover {
+	color: #cbc418
+}
+
+.files-frame .dir-list {
+	display: inline-block;
+	width: 300px;
+	background: #403d4a;
+	padding: 8px;
+	font-size: 18pt;
+	color: #ece65d;
+	border-radius: 5px
+}
+
+.files-frame .dir-list a {
+	color: #444
+}
+
+.files-frame .dir-list a:hover {
+	color: #cbc418
+}
+
+.files-frame input[type=checkbox] {
+	display: none
+}
+
+/* .files-frame input[type=submit] {
+	font-family: 'droid sans' arial sans-serif;
+	font-size: 16pt;
+	padding: 7px 5px;
+	color: #ece65d;
+	background: linear-gradient(to top, #fff 0, #585466 60%);
+	border-radius: 5px
+}
+
+.files-frame input[type=submit]:active {
+	background: linear-gradient(to bottom, #fff 0, #585466 60%)
+}
+
+.files-frame input[type=submit]:disabled {
+	background: #efece6;
+	color: #777;
+	border: 1.2px solid #777
+} */
+
+label.files {
+	font-size: 16pt;
+	display: inline;
+	cursor: crosshair
+}

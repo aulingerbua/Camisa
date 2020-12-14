@@ -1,0 +1,136 @@
+div.window {
+  border: 1px solid #000;
+  margin-top: 3px;
+  background-color: #fafafa;
+  min-height: 400px;
+  padding: 10px;
+}
+div.window ul {
+  list-style-type: none;
+  margin: 0;
+  margin-bottom: 30px;
+  padding: 0;
+}
+div.window ul li {
+  display: inline-block;
+}
+div#ctrl {
+  background-color: #5b44b2;
+  padding: 5px;
+  border: 1px solid #000;
+}
+div#ctrl input {
+  background-color: #5b44b2;
+  font-family: "Droid Sans", arial, sans-serif;
+  font-size: 15pt;
+  display: inline-block;
+  margin: 2px;
+  width: 40px;
+  height: 40px;
+  padding: 3px;
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: 40px 40px;
+  border-radius: 4px;
+  outline: 0;
+}
+div#ctrl input#newdir {
+  background: #fff;
+  font-size: 11pt;
+  width: 0;
+  z-index: -1;
+  opacity: 0;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  transition: all 0.4s;
+}
+div#ctrl input#newdir.on {
+  padding: 3px;
+  border: 0.1mm solid #000;
+  transition: all 0.4s;
+  z-index: 10;
+  opacity: 1;
+  width: 120px;
+}
+div#ctrl input#home {
+  background-image: url('/filebrowser/icons/home.svg');
+}
+div#ctrl input#home:hover {
+  border: 1px solid #5b44b2;
+  cursor: pointer;
+}
+div#ctrl input#up {
+  background-image: url('/filebrowser/icons/arrow-left.svg');
+}
+div#ctrl input#up:hover {
+  border: 1px solid #5b44b2;
+  cursor: pointer;
+}
+div#ctrl input#trashbin {
+  border: 0;
+  background-image: url(/filebrowser/icons/bin2.svg);
+}
+div#ctrl input#mkdir {
+  background-image: url(/filebrowser/icons/folder-plus.svg);
+}
+div#ctrl input#mkdir:hover {
+  border: 1px solid #5b44b2;
+  cursor: pointer;
+}
+div#ctrl input#upload {
+  background-image: url(/filebrowser/icons/folder-upload.svg);
+}
+div#ctrl input#upload:hover {
+  border: 1px solid #5b44b2;
+  cursor: pointer;
+}
+div#ctrl span#tree {
+  display: inline-block;
+  border: 1px solid #5b44b2;
+  margin-left: 10px;
+  background-color: #fff;
+  padding: 3px;
+  min-width: 200px;
+  font-size: 14pt;
+  font-weight: bold;
+  color: #000;
+}
+ul#dir-listing li {
+  padding-top: 50px;
+  text-align: center;
+  height: 50px;
+  min-width: 57px;
+  margin-right: 8px;
+  background-image: url(/filebrowser/icons/folder.svg);
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: 50px 50px;
+}
+ul#file-listing a {
+  text-decoration: none;
+  padding-top: 50px;
+  text-align: center;
+  display: inline-block;
+  height: 50px;
+  min-width: 57px;
+  margin-right: 8px;
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: 50px 50px;
+}
+ul#file-listing a.text {
+  background-image: url(/filebrowser/icons/file-text2.svg);
+}
+ul#file-listing a.image {
+  background-image: url(/filebrowser/icons/file-picture.svg);
+}
+ul#file-listing a.pdf {
+  background-image: url(/filebrowser/icons/file-pdf.svg);
+}
+ul#file-listing a.unknown {
+  background-image: url(/filebrowser/icons/file-empty.svg);
+}
+.clickable:hover {
+  cursor: pointer;
+}

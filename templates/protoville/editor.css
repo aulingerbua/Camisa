@@ -1,0 +1,22 @@
+@CHARSET "ISO-8859-1";
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro);
+
+
+* {
+	color: #6C6B56;
+}
+
+body {
+	margin: 0;
+	font-family: 'Source Sans Pro', arial, sans-serif;
+	font-size: 14pt;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	color: #403D4A;
+}
+
+a {
+	text-decoration: none;
+	color: #64636a;
+}

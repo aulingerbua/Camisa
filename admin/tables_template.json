@@ -1,0 +1,40 @@
+{
+	"tables": [
+		{
+			"table1": [
+				{
+					"name": "",
+					"type": "",
+					"default": false,
+					"null": false,
+					"autoinc": true
+				}
+				
+			],
+			"primary_key": ""
+		},
+		{
+			"table2": [
+				{
+					"name": "",
+					"type": "",
+					"default": false,
+					"null": false,
+					"autoinc": true
+				}
+			],
+			"primary_key": "",
+			"unique_key": "name",
+			"prefill": [
+				{
+					"field": "",
+					"value": ""
+				},
+				{
+					"field": "",
+					"value": "''"
+				}
+			]
+		}
+	]
+}

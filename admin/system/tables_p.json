@@ -1,0 +1,382 @@
+{
+	"tables": [
+		{
+			"system": [
+				{
+					"name": "id",
+					"type": "serial",
+					"default": false,
+					"null": false
+				},
+				{
+					"name": "date",
+					"type": "timestamp with time zone",
+					"default": "now()",
+					"null": true
+				},
+				{
+					"name": "version",
+					"type": "varchar (50)",
+					"default": false,
+					"null": false
+				},
+				{
+					"name": "entry",
+					"type": "varchar (50)",
+					"default": false,
+					"null": false
+				},
+				{
+					"name": "value",
+					"type": "varchar (500)",
+					"default": false,
+					"null": false
+				},
+				{
+					"name": "grp",
+					"type": "varchar (50)",
+					"default": false,
+					"null": true
+				},
+				{
+					"name": "info",
+					"type": "varchar (500)",
+					"default": "NULL",
+					"null": true
+				}
+			],
+			"primary_key": "id",
+			"unique_key": [
+				"entry",
+				"value",
+				"version",
+				"grp"
+			]
+		},
+		{
+			"textpages": [
+				{
+					"name": "id",
+					"type": "serial",
+					"default": false,
+					"null": false
+				},
+				{
+					"name": "cdate",
+					"type": "timestamp with time zone",
+					"default": "NULL",
+					"null": true
+				},
+				{
+					"name": "adate",
+					"type": "timestamp with time zone",
+					"default": "NULL",
+					"null": true
+				},
+				{
+					"name": "creator",
+					"type": "varchar (50)",
+					"default": "NULL",
+					"null": true
+				},
+				{
+					"name": "changer",
+					"type": "varchar (50)",
+					"default": "NULL",
+					"null": true
+				},
+				{
+					"name": "page",
+					"type": "varchar (50)",
+					"default": "NULL",
+					"null": true
+				},
+				{
+					"name": "category",
+					"type": "varchar (50)",
+					"default": "NULL",
+					"null": true
+				},
+				{
+					"name": "chapter",
+					"type": "int",
+					"default": 0,
+					"null": true
+				},
+				{
+					"name": "title",
+					"type": "varchar (150)",
+					"default": "NULL",
+					"null": true
+				},
+				{
+					"name": "text",
+					"type": "TEXT",
+					"default": "NULL",
+					"null": true
+				},
+				{
+					"name": "keywords",
+					"type": "varchar (200)",
+					"default": "NULL",
+					"null": true
+				},
+				{
+					"name": "status",
+					"type": "varchar (10)",
+					"default": "'public'",
+					"null": true
+				},
+				{
+					"name": "options",
+					"type": "varchar (100)",
+					"default": "NULL",
+					"null": true
+				}
+			],
+			"primary_key": "id",
+			"unique_key": [
+				"page",
+				"category",
+				"title"
+			]
+		},
+		{
+			"pages": [
+				{
+					"name": "id",
+					"type": "serial",
+					"default": false,
+					"null": false
+				},
+				{
+					"name": "rank",
+					"type": "int",
+					"default": 0,
+					"null": true
+				},
+				{
+					"name": "name",
+					"type": "varchar (50)",
+					"default": "NULL",
+					"null": true
+				},
+				{
+					"name": "parent",
+					"type": "varchar (50)",
+					"default": false,
+					"null": true
+				},
+				{
+					"name": "template",
+					"type": "varchar (50)",
+					"default": false,
+					"null": true
+				},
+				{
+					"name": "status",
+					"type": "varchar (50)",
+					"default": "public",
+					"null": true
+				},
+				{
+					"name": "permit",
+					"type": "smallint",
+					"default": 10,
+					"null": true
+				}
+			],
+			"primary_key": "id",
+			"unique_key": "name",
+			"prefill": [
+				{
+					"field": "name",
+					"value": "'Home'"
+				},
+				{
+					"field": "template",
+					"value": "'home'"
+				}
+			]
+		},
+		{
+			"templates": [
+				{
+					"name": "id",
+					"type": "serial",
+					"default": false,
+					"null": false
+				},
+				{
+					"name": "module",
+					"type": "varchar (50)",
+					"default": "NULL",
+					"null": true
+				},
+				{
+					"name": "template",
+					"type": "varchar (50)",
+					"default": "NULL",
+					"null": true
+				},
+				{
+					"name": "permit",
+					"type": "smallint",
+					"default": 2,
+					"null": true
+				}
+			],
+			"primary_key": "id",
+			"unique_key": "template",
+			"prefill": [
+				{
+					"field": "template",
+					"value": [
+						"'default'",
+						"'home'"
+					]
+				},
+				{
+					"field": "module",
+					"value": [
+						"'single'",
+						"'single'"
+					]
+				}
+			]
+		},
+		{
+			"members": [
+				{
+					"name": "uid",
+					"type": "varchar (50)",
+					"default": false,
+					"null": false
+				},
+				{
+					"name": "name",
+					"type": "varchar (50)",
+					"default": false,
+					"null": true
+				},
+				{
+					"name": "street",
+					"type": "varchar (100)",
+					"default": false,
+					"null": true
+				},
+				{
+					"name": "areacode",
+					"type": "int (10)",
+					"default": false,
+					"null": true
+				},
+				{
+					"name": "city",
+					"type": "varchar (50)",
+					"default": false,
+					"null": true
+				},
+				{
+					"name": "tel",
+					"type": "varchar (50)",
+					"default": false,
+					"null": true
+				},
+				{
+					"name": "mobile",
+					"type": "varchar (50)",
+					"default": false,
+					"null": true
+				},
+				{
+					"name": "email",
+					"type": "varchar (50)",
+					"default": false,
+					"null": true
+				},
+				{
+					"name": "homepage",
+					"type": "varchar (100)",
+					"default": false,
+					"null": true
+				},
+				{
+					"name": "description",
+					"type": "text",
+					"default": false,
+					"null": true,
+					"autoinc": false
+				},
+				{
+					"name": "picture",
+					"type": "varchar (100)",
+					"default": false,
+					"null": true
+				},
+				{
+					"name": "pwd",
+					"type": "varchar (255)",
+					"default": false,
+					"null": false
+				},
+				{
+					"name": "role",
+					"type": "varchar (50)",
+					"default": false,
+					"null": false
+				},
+				{
+					"name": "options",
+					"type": "varchar (100)",
+					"default": false,
+					"null": true
+				}
+			],
+			"primary_key": "uid"
+		},
+		{
+			"roles": [
+				{
+					"name": "rolid",
+					"type": "serial",
+					"default": false,
+					"null": false
+				},
+				{
+					"name": "role",
+					"type": "varchar (20)",
+					"default": false,
+					"null": false
+				},
+				{
+					"name": "level",
+					"type": "smallint",
+					"default": false,
+					"null": false
+				}
+			],
+			"primary_key": "rolid",
+			"prefill": [
+				{
+					"field": "role",
+					"value": [
+						"'guest'",
+						"'member'",
+						"'editor'",
+						"'administrator'"
+					]
+				},
+				{
+					"field": "level",
+					"value": [
+						"3",
+						"2",
+						"1",
+						"-1"
+					]
+				}
+			]
+		}
+	]
+}

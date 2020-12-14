@@ -1,0 +1,8 @@
+
+ErrorDocument 404 /errors/fileNotFound.php
+
+RewriteEngine on
+RewriteBase /
+RewriteRule ^login$ loginscreen.php
+RewriteRule ^intern$ backend/backend.php
+RewriteRule ^(.*)\.htm$ index.php?page=$1 [QSA]

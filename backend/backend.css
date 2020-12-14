@@ -1,0 +1,221 @@
+@CHARSET "ISO-8859-1";
+@import url('http://fonts.googleapis.com/css?family=Droid+Sans|Source+Sans+Pro');
+
+* {
+	color: #4f527f;
+}
+
+body {
+	margin: 0;
+	font-family: 'Source Sans Pro', arial, sans-serif;
+	font-size: 13pt;
+	background-color: #bfc2c8;
+}
+
+.alert {
+	color: #F00;
+	font-weight: 600;
+}
+
+#wrapper {
+	width: 96%;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 50px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	color: #252f3a;
+}
+
+a {
+	text-decoration: none;
+	color: #122960;
+}
+
+a:hover {
+	text-decoration: none;
+	color: #706c0d;
+}
+
+#mainwindow {
+	width: 800px;
+	margin-top: 50px;
+	margin-left: 280px;
+}
+
+.box-inside-form {
+	border: 1px solid #fff;
+	border-radius: 6px;
+	float: left;
+	margin: 3px;
+	padding: 5px;
+	min-height: 260px;
+}
+
+#mainwindow ul {
+	list-style-type: none;
+	margin: 5px 0;
+	padding: 0;
+}
+
+#mainwindow ul li {
+	padding: 5px;
+}
+
+#mainwindow select,
+#mainwindow input {
+font-family: "Droid Sans", arial, sans-serif;
+font-size: 12pt;
+color: #252f3a;
+margin: 0;
+border: 0;
+padding: 3px;
+background-color: #fff2ba;
+outline: 0;
+}
+
+/*#mainwindow select {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	background: url(img/arrdown.png) no-repeat right #f5df73;
+}*/
+
+#mainwindow input[type=text] {
+	min-width: 200px;
+}
+
+#mainwindow input[type=number] {
+	width: 50px;
+}
+
+#mainwindow input[readonly] {
+	background-color: #f5dfa5;
+	color: #8598c4;
+}
+
+#mainwindow textarea {
+	padding: 4px;
+}
+
+#mainwindow input[type=submit] {
+	margin:10px;
+	border: 1px solid #252f3a;
+	border-radius: 4px;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	-o-border-radius: 4px;
+	-ie-border-radius: 4px;
+}
+
+#mainwindow input[type=submit]:hover {
+	background-color: #e9c525;
+}
+
+#mainwindow input[type=submit]:disabled {
+	background: #efece6;
+	color: #777;
+	border: 1.2px solid #777
+}
+
+#mainwindow label {
+	width: 140px;
+	display: inline-block;
+	font-family: "Droid Sans", arial, sans-serif;
+}
+
+.above label {
+	width: 200px;
+	display: block;
+	font-family: "Droid Sans", arial, sans-serif;
+}
+
+#mainwindow li p {
+	width: 140px;
+	font-family: "Droid Sans", arial, sans-serif;
+}
+
+input#chapter {
+	width: 50px;
+}
+
+input#title, input#keywords {
+	width: 500px;
+}
+
+.delete-entry {
+	border: 1px solid #ff0000;
+	width: 300px;
+	padding: 7px;
+	text-align: center;
+	color: #000;
+	font-family: arial, sans-serif;
+}
+
+#sideB {
+	margin: 20px 20px 0 0;
+	width: 250px;
+	float: left;
+}
+
+#sideB ul {
+	list-style-type: none;
+	padding: 0;
+}
+
+#sideB #current a {
+	background-color: #5b44b2;
+}
+
+#sideB a {
+	display: block;
+	font-family: "Droid Sans", arial, sans-serif;
+	text-align: center;
+	padding: 3px;
+	font-size: 16pt;
+	background-color: #ffe46b;
+}
+
+#sideB p {
+	font-family: "Droid Sans", arial, sans-serif;
+	text-align: center;
+	padding: 3px;
+	font-size: 16pt;
+	margin: 4px 0;
+	background-color: #ffe46b;
+}
+
+.menue-off {
+	display: none;
+}
+
+#sideB ul li ul li a {
+	display: block;
+	font-family: "Droid Sans", arial, sans-serif;
+	color: #ffe46b;
+	text-align: center;
+	padding: 3px;
+	font-size: 16pt;
+	background-color: #4329a1
+}
+
+#sideB ul li ul li a:hover {
+	background-color: #5b44b2;
+}
+
+#titleListWindow {
+	padding: 4px;
+	max-height: 200px;
+	overflow-y: scroll;
+	margin-bottom: 10px;
+}
+
+#titleListWindow li#current a {
+	color: #706c0d;
+}
+
+#titleListWindow ul {
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+}

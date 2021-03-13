@@ -570,7 +570,7 @@ function notifyMember($memberID, string $message, $subject = "notification")
 }
 
 /**
- * Sends an email messgage to the specified member ID(s)
+ * Sends an email messgage to members having an Admin role
  *
  * @param string $message
  * @param string $subject
@@ -578,7 +578,7 @@ function notifyMember($memberID, string $message, $subject = "notification")
  */
 function notifyAdmins(string $message, string $subject = "notification")
 {
-    $admins = (new Users())->receive([
+    $admins = (new Users())->retrieve([
         'role' => 'administrator'
     ], NULL, "uid");
     for ($i = 1; $i < count($admins); $i ++) {

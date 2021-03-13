@@ -72,7 +72,7 @@ class Guests extends Registry
             $link = URI . "/admin/receptiondesk.php?uid=" . $details['uid'];
 
             if (self::exist([
-                email => $details['email']
+                'email' => $details['email']
             ])) {
                 $this->warn_msg = "Diese Emailadresse ist bereits registriert.";
                 $details['quit'] = $this->buttons['quit'];
@@ -184,7 +184,7 @@ class Guests extends Registry
     /**
      * Checks if the invitation is valid.
      *
-     * @param unknown $uid
+     * @param string $uid
      * @return boolean
      */
     public function checkInvitation($uid)

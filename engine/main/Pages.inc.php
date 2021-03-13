@@ -2,7 +2,7 @@
 class Pages extends Registry {
 	function __construct() {
 		parent::setTable ( 'pages' );
-		parent::setUniqueField ( 'name' );
+		parent::setUniqueField ( 'id' );
 		parent::setOrderBy ( 'rank' );
 	}
 	/**
@@ -87,7 +87,7 @@ class Pages extends Registry {
 		 * find children of Pages
 		 */
 		$children = self::retrieve ( [ 
-				parent => $parent 
+				'parent' => $parent 
 		], NULL, $this->uniquefield );
 		while ( $children ) {
 			$ch [] = array_shift ( $children ) [$this->uniquefield];
@@ -112,8 +112,8 @@ class Pages extends Registry {
 	/**
 	 * Checks if the page is visible to Users with the specified user level.
 	 *
-	 * @param unknown $page        	
-	 * @param unknown $user_level        	
+	 * @param String $page        	
+	 * @param Integer $user_level        	
 	 * @return boolean
 	 */
 	public function visible($page, $user_level = NULL) {

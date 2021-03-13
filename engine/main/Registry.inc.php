@@ -404,7 +404,7 @@ abstract class Registry {
 	 *
 	 * @param array $input
 	 *        	an associated array with the updete values
-	 * @param unknown $which
+	 * @param String $which
 	 *        	the unique identifier of the updated row.
 	 * @return boolean true on success, false if the update failed or nothing has to be updated.
 	 */
@@ -712,9 +712,9 @@ abstract class Registry {
 	/**
 	 * Deletes the row corresponding to the unique identifier.
 	 *
-	 * @param $which the
+	 * @param string $which the
 	 *        	unique identifier of the data set.
-	 * @param $constraints option
+	 * @param array $constraints option
 	 *        	to set constraints about the entry to delete.
 	 */
 	protected function delete($which, $constraints = NULL) {
@@ -726,7 +726,9 @@ abstract class Registry {
 			self::executeQuery ( $qry );
 		} catch ( Exception $e ) {
 			$log->write ( $e->getMessage () );
+			return FALSE;
 		}
+		return TRUE;
 	}
 	protected function checkDelete($which) {
 		$del [] = '<form class="delete-entry" action="" method="post">';

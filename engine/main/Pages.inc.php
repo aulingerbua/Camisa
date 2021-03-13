@@ -104,7 +104,7 @@ class Pages extends Registry {
 	    }
 	    
 	    while ( $row = $result->fetch_assoc () ) {
-	        $nl [] = $row [$this->uniquefield];
+	        $nl [] = $row ['name'];
 	    }
 	    
 	    return $nl;

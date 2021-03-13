@@ -82,6 +82,33 @@ class Pages extends Registry {
 		
 		echo implode ( "\n", $form );
 	}
+	/**
+	 * Returns all page names as an array.
+	 *
+	 * @return array $nl
+	 */
+	public function nameList() {
+	    $db = db_init ();
+	    $log = start_system_log ( "nameList" );
+	    
+	    $qry = 'SELECT name FROM ' . $this->table;
+	    
+	    if ($this->orderby) {
+	        $qry .= " ORDER BY $this->orderby";
+	    }
+	    // echo $qry;
+	    $result = $db->query ( $qry );
+	    
+	    if (! $result) {
+	        $log->write ( "Data base error! " . $db->error, LOG_ERROR );
+	    }
+	    
+	    while ( $row = $result->fetch_assoc () ) {
+	        $nl [] = $row [$this->uniquefield];
+	    }
+	    
+	    return $nl;
+	}
 	public function findChildren($parent) {
 		/*
 		 * find children of Pages
